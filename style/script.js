@@ -1,7 +1,7 @@
 const PHRASES = [
-  "Dr.Gifter",
-  "I Love You Dr.Gifter",
-  "Dr.Gifter ❤️❤️❤️",
+  "Bùi Ngọc Thiên Hương",
+  "I Love You bé Hương",
+  "Bùi Ngọc Thiên Hương ❤️❤️❤️",
   "Valentine vui vẻ ❤️",
   "Có em, mọi thứ đều trở nên kỳ diệu 🌙 💖",
   "Valentine ấm áp và bình yên nha 💖",
@@ -289,6 +289,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
