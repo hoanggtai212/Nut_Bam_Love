@@ -563,7 +563,7 @@ body {
 /* ========================= */
 /* 💗 NEON PINK HEART GLOW 💗 */
 /* ========================= */
-
+}
 @keyframes neonPinkGlow {
     0% {
         transform: translate(-50%, -50%) scale(1);
@@ -600,3 +600,4 @@ body {
 }
 
 }
+
