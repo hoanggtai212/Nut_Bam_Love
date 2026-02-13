@@ -150,7 +150,6 @@ if (phraseIndex >= PHRASES.length) {
     "linear-gradient(135deg, rgba(255, 105, 180, 0.9), rgba(199, 21, 133, 0.95))",
     "linear-gradient(135deg, rgba(255, 192, 203, 0.9), rgba(219, 112, 147, 0.95))"
   ];
-  el.style.background = colors[Math.floor(Math.random() * colors.length)];
 
   const heartRect = heartBtn.getBoundingClientRect();
   const sceneRect = scene.getBoundingClientRect();
@@ -295,6 +294,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
