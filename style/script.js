@@ -133,7 +133,12 @@ function releasePhrase() {
 }
 
 function createPhrase() {
-  const phraseText = PHRASES[Math.floor(Math.random() * PHRASES.length)];
+  const phraseText = PHRASES[phraseIndex];
+phraseIndex++;
+
+if (phraseIndex >= PHRASES.length) {
+  phraseIndex = 0;
+}
   const el = document.createElement("div");
   el.className = "phrase shooting";
   el.textContent = phraseText;
@@ -289,6 +294,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
