@@ -26,6 +26,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 let isProcessing = false;
 let firstClick = true;
 let isPlaying = false;
+let phraseIndex = 0;
 
 function triggerRelease(e) {
   if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
@@ -294,6 +295,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
