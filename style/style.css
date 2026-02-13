@@ -560,4 +560,43 @@ body {
   /* Reducido ligeramente */
   color: rgba(255, 214, 231, 0.8);
   font-weight: 400;
+/* ========================= */
+/* 💗 NEON PINK HEART GLOW 💗 */
+/* ========================= */
+
+@keyframes neonPinkGlow {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        background: linear-gradient(45deg, #ffb6d9, #ff8fcf);
+        box-shadow:
+            0 0 5px #ff69b4,
+            0 0 15px #ff69b4,
+            0 0 30px #ff1493;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+        background: linear-gradient(45deg, #ff1493, #ff0080);
+        box-shadow:
+            0 0 15px #ff1493,
+            0 0 30px #ff0080,
+            0 0 60px #ff0080;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        background: linear-gradient(45deg, #ffb6d9, #ff8fcf);
+        box-shadow:
+            0 0 5px #ff69b4,
+            0 0 15px #ff69b4,
+            0 0 30px #ff1493;
+    }
+}
+
+/* Ghi đè lại hiệu ứng của phrase */
+.phrase {
+    animation: neonPinkGlow 1.5s ease-in-out infinite;
+    color: white !important;
+}
+
 }
