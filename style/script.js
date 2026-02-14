@@ -1,12 +1,14 @@
 const PHRASES = [
+  "Gửi tới người a thương",
   "Bùi Ngọc Thiên Hương",
-  "I Love You bé Hương",
   "Bùi Ngọc Thiên Hương ❤️❤️❤️",
+  "Ai lớp diu",
   "Valentine vui vẻ ❤️",
   "Có em, mọi thứ đều trở nên kỳ diệu 🌙 💖",
   "Valentine ấm áp và bình yên nha 💖",
   "Chúc em luôn cười thật tươi 🌟💖",
   "Valentine ngọt ngào như một bản nhạc 🎶💖"
+  "Valentine hạnh phúc nha cô gái của anh 🌸💗"
 ];
 
 const scene = document.getElementById("scene");
@@ -211,3 +213,4 @@ function createParticlesBurst() {
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
