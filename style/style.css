@@ -327,7 +327,7 @@ animation: pinkFlow 4s ease-in-out infinite;
   /* Highlight edge */
 
   font-weight: 700;
-  color: var(--pink);
+  color: #ff9ecf;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   font-size: clamp(16px, 2.8vw, 24px);
   letter-spacing: 0.5px;
@@ -598,3 +598,4 @@ animation: pinkFlow 4s ease-in-out infinite;
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
