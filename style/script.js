@@ -133,6 +133,8 @@ function releasePhrase() {
   createPhrase();
 }
 
+let bgIndex = 0;
+
 function createPhrase() {
   const phraseText = PHRASES[phraseIndex];
   phraseIndex++;
@@ -149,6 +151,22 @@ function createPhrase() {
     0 0 16px #ff69b4
   `;
 
+// 💗 ĐỔI MÀU NỀN TỪ NHẠT → ĐẬM
+const pinkSteps = [
+  "linear-gradient(135deg, #ffd6e7, #ffb6d9)",
+  "linear-gradient(135deg, #ffc0db, #ff9ed0)",
+  "linear-gradient(135deg, #ff9ed0, #ff85c1)",
+  "linear-gradient(135deg, #ff85c1, #ff69b4)",
+  "linear-gradient(135deg, #ff69b4, #ff1493)"
+];
+
+el.style.background = pinkSteps[bgIndex];
+
+bgIndex++;
+if (bgIndex >= pinkSteps.length) {
+  bgIndex = 0;
+}
+  
   const heartRect = heartBtn.getBoundingClientRect();
   const sceneRect = scene.getBoundingClientRect();
 
@@ -292,6 +310,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
