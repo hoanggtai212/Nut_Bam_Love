@@ -3,16 +3,16 @@ const PHRASES = [
   "Ai lớp diu",
   "Gửi ts tình iu của toi",
   "Valentine vui vẻ ❤️",
-  "Tgiới ngoài kia rộng lớn,nhưng với anh,"
-  "Có em là đủ để mọi thứ trở nên đặc biệt r"
-  "Cảm ơn em đã đến bên anh ❤️"
-  "Valentine này chúc em:"
-  "Ăn không mập, ngủ không muộn,"
-  "Và yêu anh không lối thoát 😌"
-  "Anh từng nghĩ tình yêu chỉ là những điều giản đơn…"
-  "Cho đến khi gặp em,anh nhận ra một điều…"
-  "Socola có thể tan chảy, Hoa có thể héo…"
-  "Nhưng độ nhây của anh thì còn mãi nha em 😆"
+  "Tgiới ngoài kia rộng lớn,nhưng với anh,",
+  "Có em là đủ để mọi thứ trở nên đặc biệt r",
+  "Cảm ơn em đã đến bên anh ❤️",
+  "Valentine này chúc em:",
+  "Ăn không mập, ngủ không muộn,",
+  "Và yêu anh không lối thoát 😌",
+  "Anh từng nghĩ tình yêu chỉ là những điều giản đơn…",
+  "Cho đến khi gặp em,anh nhận ra một điều…",
+  "Socola có thể tan chảy, Hoa có thể héo…",
+  "Nhưng độ nhây của anh thì còn mãi nha em 😆",
 ];
 
 const scene = document.getElementById("scene");
@@ -320,6 +320,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
