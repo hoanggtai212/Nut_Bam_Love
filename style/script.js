@@ -153,11 +153,16 @@ function createPhrase() {
 
 // 💗 ĐỔI MÀU NỀN TỪ NHẠT → ĐẬM
 const pinkSteps = [
-  "linear-gradient(135deg, #ffd6e7, #ffb6d9)",
-  "linear-gradient(135deg, #ffc0db, #ff9ed0)",
-  "linear-gradient(135deg, #ff9ed0, #ff85c1)",
+  "linear-gradient(135deg, #ffe6f2, #ffd6eb)",
+  "linear-gradient(135deg, #ffd6eb, #ffc2e0)",
+  "linear-gradient(135deg, #ffc2e0, #ffadd6)",
+  "linear-gradient(135deg, #ffadd6, #ff99cc)",
+  "linear-gradient(135deg, #ff99cc, #ff85c1)",
   "linear-gradient(135deg, #ff85c1, #ff69b4)",
-  "linear-gradient(135deg, #ff69b4, #ff1493)"
+  "linear-gradient(135deg, #ff69b4, #ff4da6)",
+  "linear-gradient(135deg, #ff4da6, #ff3399)",
+  "linear-gradient(135deg, #ff3399, #ff1a8c)",
+  "linear-gradient(135deg, #ff1a8c, #ff007f)"
 ];
 
 el.style.background = pinkSteps[bgIndex];
@@ -310,6 +315,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
