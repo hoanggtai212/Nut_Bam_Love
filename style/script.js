@@ -6,7 +6,7 @@ const PHRASES = [
   "Có em, mọi thứ đều trở nên kỳ diệu 🌙 💖",
   "Valentine ấm áp và bình yên nha 💖",
   "Chúc em luôn cười thật tươi 🌟💖",
-  "Valentine ngọt ngào như một bản nhạc 🎶💖"
+  "Valentine ngọt ngào như một bản nhạc 🎶💖",
 ];
 
 const scene = document.getElementById("scene");
@@ -135,21 +135,19 @@ function releasePhrase() {
 
 function createPhrase() {
   const phraseText = PHRASES[phraseIndex];
-phraseIndex++;
+  phraseIndex++;
+  if (phraseIndex >= PHRASES.length) phraseIndex = 0;
 
-if (phraseIndex >= PHRASES.length) {
-  phraseIndex = 0;
-}
   const el = document.createElement("div");
   el.className = "phrase shooting";
   el.textContent = phraseText;
 
-  const colors = [
-    "linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(139, 69, 119, 0.95))",
-    "linear-gradient(135deg, rgba(147, 112, 219, 0.9), rgba(75, 0, 130, 0.95))",
-    "linear-gradient(135deg, rgba(255, 105, 180, 0.9), rgba(199, 21, 133, 0.95))",
-    "linear-gradient(135deg, rgba(255, 192, 203, 0.9), rgba(219, 112, 147, 0.95))"
-  ];
+  // 💗 Màu hồng cố định
+  el.style.color = "#ff1493";
+  el.style.textShadow = `
+    0 0 8px #ff1493,
+    0 0 16px #ff69b4
+  `;
 
   const heartRect = heartBtn.getBoundingClientRect();
   const sceneRect = scene.getBoundingClientRect();
@@ -294,6 +292,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
