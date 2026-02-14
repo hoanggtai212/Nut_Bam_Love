@@ -166,9 +166,6 @@ const pinkSteps = [
   "linear-gradient(135deg, #ff4da6, #ff3399)",
   "linear-gradient(135deg, #ff3399, #ff1a8c)",
   "linear-gradient(135deg, #ff1a8c, #ff007f)",
-  "linear-gradient(135deg, #e60073, #cc0066)",
-  "linear-gradient(135deg, #b30059, #99004d)",
-  "linear-gradient(135deg, #800040, #660033)"
 ];
 
 el.style.background = pinkSteps[bgIndex];
@@ -320,6 +317,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
