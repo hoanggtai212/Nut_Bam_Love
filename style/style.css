@@ -4,8 +4,6 @@
   --pink: #ffd6e7;
   --heart: #ff2b4f;
   --shadow: rgba(255, 43, 79, 0.6);
-  --textGlow: 0 0 0.6rem rgba(255, 214, 231, 0.9);
-  --maxWidth: 1200px;
   --messageBoxBg: rgba(139, 69, 119, 0.6);
 }
 
@@ -14,8 +12,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -23,9 +20,20 @@ body {
   margin: 0;
   font-family: "Pattaya", sans-serif;
   color: var(--fg);
-  background: linear-gradient(to bottom, #000000, #2a3a6b);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
-  user-select: none;
+}
+
+/* ================= SCENE ================= */
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 /* ================= HEART ================= */
@@ -38,13 +46,16 @@ body {
   border: none;
   background: transparent;
   cursor: pointer;
-  filter: drop-shadow(0 0 40px rgba(255, 43, 79, 0.55));
-  transition: transform 0.1s ease;
+  filter: drop-shadow(0 0 40px rgba(255, 43, 79, 0.6));
   z-index: 2;
 }
 
-.heart-btn:active {
-  transform: scale(0.95);
+.heart svg .core {
+  fill: var(--heart);
+  filter: drop-shadow(0 0 20px var(--shadow))
+          drop-shadow(0 0 40px rgba(255, 43, 79, 0.4));
+  animation: gentleBeat 2.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 @keyframes gentleBeat {
@@ -77,7 +88,32 @@ body {
   animation: neonPinkGlow 1.6s ease-in-out infinite;
 }
 
-/* ================= NEON PINK ANIMATION ================= */
+/* ================= PHRASE SHOOT ================= */
+
+.phrase.shooting {
+  animation: shootAndFall 6s ease forwards,
+             neonPinkGlow 1.6s ease-in-out infinite;
+}
+
+@keyframes shootAndFall {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -200px) scale(1.1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 200px) scale(0.8);
+  }
+}
+
+/* ================= NEON PINK ================= */
 
 @keyframes neonPinkGlow {
 
@@ -89,13 +125,6 @@ body {
       0 0 10px #ff69b4;
   }
 
-  25% {
-    background: linear-gradient(135deg, #ff8fcf, #ff69b4);
-    box-shadow:
-      0 0 10px #ff69b4,
-      0 0 20px #ff1493;
-  }
-
   50% {
     transform: translate(-50%, -50%) scale(1.08);
     background: linear-gradient(135deg, #ff1493, #ff0080);
@@ -105,13 +134,6 @@ body {
       0 0 60px #ff0080;
   }
 
-  75% {
-    background: linear-gradient(135deg, #ff8fcf, #ff69b4);
-    box-shadow:
-      0 0 10px #ff69b4,
-      0 0 20px #ff1493;
-  }
-
   100% {
     transform: translate(-50%, -50%) scale(1);
     background: linear-gradient(135deg, #ffd6e7, #ffb6d9);
@@ -119,4 +141,43 @@ body {
       0 0 5px #ffb6c1,
       0 0 10px #ff69b4;
   }
+}
+
+/* ================= MUSIC PLAYER ================= */
+
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--messageBoxBg);
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 214, 231, 0.3);
+  box-shadow: 0 8px 32px rgba(255, 43, 79, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  min-width: 260px;
+}
+
+.play-pause-btn {
+  background: rgba(255, 43, 79, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.play-pause-btn:hover {
+  background: rgba(255, 43, 79, 1);
+  transform: scale(1.05);
 }
