@@ -593,11 +593,8 @@ animation: pinkFlow 4s ease-in-out infinite;
     }
 }
 
-/* Ghi đè lại hiệu ứng của phrase */
-.phrase {
-    animation: neonPinkGlow 1.5s ease-in-out infinite;
-    color: white !important;
+@keyframes pinkFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
-
-
