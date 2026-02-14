@@ -592,3 +592,7 @@ body {
             0 0 30px #ff1493;
     }
 }
+.phrase {
+    animation: neonPinkGlow 1.5s ease-in-out infinite;
+    color: white !important;
+}
