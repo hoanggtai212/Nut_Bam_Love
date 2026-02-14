@@ -181,10 +181,9 @@ if (bgIndex >= pinkSteps.length) {
   el.style.left = startX + "px";
   el.style.top = startY + "px";
 
-  const angle = Math.random() * 120 - 150;
-  const shootForce = rand(150, 230);
-  const shootX = Math.cos((angle * Math.PI) / 180) * shootForce;
-  const shootY = Math.sin((angle * Math.PI) / 180) * shootForce;
+  const shootForce = rand(180, 250);
+  const shootX = 0;
+  const shootY = -shootForce;
 
   const fallDistance = rand(250, 450);
   const horizontalDrift = rand(-120, 120);
@@ -315,6 +314,7 @@ setInterval(createShootingStar, 3500);
 function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 
 
 
