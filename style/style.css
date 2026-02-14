@@ -317,9 +317,9 @@ body {
   position: absolute;
   display: inline-block;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg,
-      rgba(255, 182, 193, 0.8),
-      rgba(139, 69, 119, 0.95));
+  background: linear-gradient(135deg, #ffd6e7, #ff1493);
+background-size: 200% 200%;
+animation: pinkFlow 4s ease-in-out infinite;
   /* backdrop-filter removed */
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -598,5 +598,6 @@ body {
     animation: neonPinkGlow 1.5s ease-in-out infinite;
     color: white !important;
 }
+
 
 
